@@ -4,7 +4,7 @@ Location Based task reminder
 
 ### Location based Task Reminder
 
-RemindMe is a cutting-edge Flutter application designed to revolutionize task reminders based on your location. With its intuitive interface and powerful features, RemindMe allows you to set location-based reminders effortlessly. Whether you need to pick up groceries on your way home or remember to grab your passport before leaving for the airport, RemindMe has got you covered. By utilizing GPS technology, the app ensures that you receive timely notifications when you enter or exit a specific location, helping you stay organized and on top of your tasks like never before.
+RemindMe is a cutting-edge Flutter application designed to revolutionize task reminders based on your location. With its intuitive interface and powerful features, RemindMe allows you to set location-based reminders effortlessly. Whether you need to pick up groceries on your way home or remember to grab your passport before leaving for the airport, RemindMe has got you covered. By utilizing GPS technology, the app ensures that you receive timely notifications when you enter a specific location, helping you stay organized and on top of your tasks like never before.
 
 ### Features:
 
