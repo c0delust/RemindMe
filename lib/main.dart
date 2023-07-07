@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_background_service/flutter_background_service.dart';
@@ -90,10 +92,6 @@ checkLocationPermission(BuildContext context) async {
                     onPressed: () async {
                       Navigator.of(context).pop();
                       await Geolocator.openLocationSettings();
-                      Future.delayed(
-                        Duration(seconds: 10),
-                        () => initializeService(),
-                      );
                     },
                     style:
                         ElevatedButton.styleFrom(backgroundColor: Colors.green),
@@ -112,6 +110,13 @@ checkLocationPermission(BuildContext context) async {
         print('Service is already running.');
     }
   }
+
+  final StreamSubscription serviceStatusStream =
+      Geolocator.getServiceStatusStream().listen((status) {
+    if (status.name == "enabled") {
+      initializeService();
+    }
+  });
 }
 
 class MyApp extends StatefulWidget {
